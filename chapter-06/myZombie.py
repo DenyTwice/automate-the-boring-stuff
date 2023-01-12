@@ -78,13 +78,13 @@ class MyZombie:
         #         diceRollResults = zombiedice.roll()
 
         # A bot that stops rolling after it has rolled more shotguns than brains
-        # while diceRollResults is not None:
-            # shotguns = diceRollResults['shotgun']
-            # brains = diceRollResults['brains']
-            # if shotguns > brains:
-                # break
-            # else:
-                # diceRollResults = zombiedice.roll()
+        while diceRollResults is not None:
+            shotguns = diceRollResults['shotgun']
+            brains = diceRollResults['brains']
+            if shotguns > brains:
+                break
+            else:
+                diceRollResults = zombiedice.roll()
         
 zombies = (
     zombiedice.examples.RandomCoinFlipZombie(name='Random'),
